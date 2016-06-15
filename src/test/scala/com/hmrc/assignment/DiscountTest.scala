@@ -11,10 +11,6 @@ class DiscountTest extends FunSuite {
     val orangeOffersBasket = List(Orange, Orange, Orange, Apple)
     val appleAndOrangeOffersBasket = appleOffersBasket union orangeOffersBasket
 
-    def totalCost(basket: List[Product]) = {
-      basket.foldLeft(0d)((acc, product) => acc + product.cost)
-    }
-
     def number(product: Product, basket: List[Product]) = basket.count(_ == product)
   }
 
